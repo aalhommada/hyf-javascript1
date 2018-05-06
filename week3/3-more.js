@@ -5,7 +5,7 @@ let testObject = {
   test3: 3,
   test4: 4
 };
-function printProperties (object) {
+function printProperties(object) {
   console.log('Object properties are: ' + Object.keys(testObject));
   console.log('Object properties\' values are: ' + Object.values(testObject));
 }

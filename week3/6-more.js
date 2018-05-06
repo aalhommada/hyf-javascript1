@@ -1,6 +1,6 @@
 'use strict';
 function vehicle(color, type, age) {
-  if ( type === 1 && age > 1) {
+  if (type === 1 && age > 1) {
     return 'a ' + color + ' used car';
   } else if (type === 1 && age === 1) {
     return 'a ' + color + ' new car';

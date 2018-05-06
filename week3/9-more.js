@@ -1,7 +1,7 @@
 'use strict';
 function vehicle(color, type, age) {
   let listOfVehicles = ["motorbike", "caravan", "bike"];
-  if ( type === 1 && age > 1) {
+  if (type === 1 && age > 1) {
     return 'a ' + color + ' used motorbike';
   } else if (type === 1 && age === 1) {
     return 'a ' + color + ' new motorbike';
