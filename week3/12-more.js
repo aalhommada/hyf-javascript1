@@ -1,8 +1,8 @@
 'use strict';
-let o1 = { foo: 'bar' };
+const o1 = { foo: 'bar' };
 let o2 = { foo: 'bar' };
 
-let o3 = o2;
+const o3 = o2;
 console.log('o1', o1, 'o2', o2, 'o3', o3); //assigning o2 as a value to o3 doesn't change o2
 
 o1.foo = 'baz';
