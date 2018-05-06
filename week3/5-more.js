@@ -1,2 +1,2 @@
 'use strict';
-console.log('yes'); // 3 always equals 3
+const test = 3; (test === 3)? console.log('yes') : console.log('no');

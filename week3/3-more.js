@@ -1,12 +1,19 @@
 'use strict';
-let testObject = {
-  test1: 1,
-  test2: 2,
-  test3: 3,
-  test4: 4
-};
-function printProperties(object) {
-  console.log('Object properties are: ' + Object.keys(testObject));
-  console.log('Object properties\' values are: ' + Object.values(testObject));
+
+function printObject(object) {
+
+  for (const key in object) {
+    console.log('Property: ' + key + '\tValue: ' + object[key]);
+  }
+
 }
-printProperties(testObject);
+
+const person = {
+  firstName: 'Neveen',
+  lastName: 'Atik',
+  education: 'Economics',
+  yearsExperience: 10,
+  city: 'Amsterdam'
+};
+
+printObject(person);

@@ -1,15 +1,12 @@
 'use strict';
-function vehicle(color, type, age) {
-  if (type === 1 && age > 1) {
-    return 'a ' + color + ' used car';
-  } else if (type === 1 && age === 1) {
-    return 'a ' + color + ' new car';
-  } else if (type === 2 && age > 1) {
-    return 'a ' + color + ' used motorbike';
-  } else if (type === 2 && age === 1) {
-    return 'a ' + color + ' new motorbike';
+function vehicleType(color, type, age) {
+  const status = age > 1 ? age = 'used' : age = 'new';
+  if (type === 1) {
+    return 'a ' + color + ' ' + status + ' car';
+  } else if (type === 2) {
+    return 'a ' + color + ' ' + status + ' motorbike';
   } else {
     return 'please choose type 1 or 2';
   }
 }
-console.log(vehicle("blue", 1, 5));
+console.log(vehicleType("blue", 1, 5));

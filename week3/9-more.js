@@ -1,20 +1,22 @@
 'use strict';
-function vehicle(color, type, age) {
-  let listOfVehicles = ["motorbike", "caravan", "bike"];
-  if (type === 1 && age > 1) {
-    return 'a ' + color + ' used motorbike';
-  } else if (type === 1 && age === 1) {
-    return 'a ' + color + ' new motorbike';
-  } else if (type === 2 && age > 1) {
-    return 'a ' + color + ' used caravan';
-  } else if (type === 2 && age === 1) {
-    return 'a ' + color + ' new caravan';
-  } else if (type === 3 && age > 1) {
-    return 'a ' + color + ' used bike';
-  } else if (type === 3 && age === 1) {
-    return 'a ' + color + ' new bike';
-  } else {
-    return 'please choose type 1, 2 or 3';
+function advertisement(vehicleNames) {
+  let servicesWeProvide = '';
+
+  for (let i = 0; i < vehicleNames.length; i++) {
+    const serviceInPlural = vehicleNames[i] + 's';
+    if (i === (vehicleNames.length - 1)) {
+
+      servicesWeProvide += 'and ' + serviceInPlural + '.';
+    } else {
+      servicesWeProvide += serviceInPlural + ', ';
+    }
   }
+
+  return 'Amazing Joe\'s Garage, we service ' + servicesWeProvide;
+
 }
-console.log(vehicle("green", 3, 1));
+
+const vehicles = ['car', 'motorbike', 'caravan', 'bike'];
+vehicles.push('scooter');
+const text = advertisement(vehicles);
+console.log(text);
