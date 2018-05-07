@@ -9,4 +9,4 @@ function vehicleType(color, type, age) {
     return 'please choose type 1 or 2';
   }
 }
-console.log(vehicleType("blue", 1, 5));
+console.log(vehicleType('blue', 1, 5));

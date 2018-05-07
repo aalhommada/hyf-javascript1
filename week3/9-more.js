@@ -7,6 +7,8 @@ function advertisement(vehicleNames) {
     if (i === (vehicleNames.length - 1)) {
 
       servicesWeProvide += 'and ' + serviceInPlural + '.';
+    } else if (i === (vehicleNames.length - 2)) {
+      servicesWeProvide += serviceInPlural + ' ';
     } else {
       servicesWeProvide += serviceInPlural + ', ';
     }
