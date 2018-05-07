@@ -1,3 +1,4 @@
+'use strict';
 const monday = [
   {
     name: 'Write a summary HTML/CSS',
@@ -41,14 +42,13 @@ const tuesday = [
 ];
 
 const tasks = monday.concat(tuesday);
-let declarableTime = function(tasks) {
-  let time = 0, hours;
+function declarableTime(tasks) {
+  let time = 0;
   for (let i = 0; i < tasks.length; i++) {
     if (tasks[i].duration >= 120) {
       time += tasks[i].duration;
-      hours = time / 60;
     }
   }
-  return hours;
-};
-console.log('Maartje has earned €' +(declarableTime(tasks) * 25).toFixed(2));
+  return time / 60;
+}
+console.log('Maartje has earned €' + (declarableTime(tasks) * 25).toFixed(2));
